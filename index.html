@@ -2,9 +2,67 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title></title>
-  </head>
-  <body>
-    <h1>HEllo ALL</h1>
+
+    <style>
+body {
+  background-image: url('images/forback.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+    </head>
+    <body>
+      <div style="text-align:center;padding:1em 0;"> <h4><a style="text-decoration:none;" </a></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=America%2FLos_Angeles" width="100%" height="90" frameborder="0" seamless></iframe> </div>
+
+    <div class="text-align:center">
+
+      <script type="text/javascript">
+       document.write("<center><font size=+5 style='color: black; font-family: cursive;'>");
+       var day = new Date();
+       var hr = day.getHours();
+       if (hr >= 4 && hr < 12) {
+           document.write("Hey Good Morning Shravani");
+       } else if (hr == 12) {
+           document.write("Hey Good Noon Shravani!");
+       } else if (hr >= 12 && hr <= 16) {
+           document.write("Hey Good Afternoon Shravani");
+       } else if (hr >=16 && hr <= 23) {
+           document.write("Hey Good Evening Shravani");
+       } else {
+         document.write("Hey Shravani it's sleep time");
+       }
+       document.write("</font></center>");
+   </script>
+    </div>
+
+    <div style="padding:12em 0;"><center>
+      <a href="https://www.google.com"; >
+        <img alt="Google" src="images/google.png"
+        width="100" height="150">
+      </a></center>
+      </div>
+
+
+      <div id="container">
+
+        <header>
+          <input type="text" placeholder="Enter an activity.." id="item" />
+          <button id="add">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+            </svg>
+          </button>
+        </header>
+        <h2>To Do</h2>
+        <ul class="todo" id="todo">
+          </ul>
+          <h2>Completed</h2>
+        <ul class="completed" id="completed"></ul>
+      </div>
+
   </body>
 </html>
